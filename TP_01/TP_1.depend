@@ -1,0 +1,48 @@
+# depslib dependency file v1.0
+1459903898 source:e:\tp 01\tp_1\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	"misFunciones.h"
+
+1459904004 e:\tp 01\tp_1\misfunciones.h
+
+1459904004 source:e:\tp 01\tp_1\misfunciones.c
+	<stdio.h>
+	<string.h>
+	<ctype.h>
+
+1459896524 source:e:\tp 01\tp_1\biblioteca\misfunciones.c
+	<stdio.h>
+	<string.h>
+	<ctype.h>
+
+1459982700 source:f:\tp 01\tp_1\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	"misFunciones.h"
+
+1459904004 f:\tp 01\tp_1\misfunciones.h
+
+1459904004 source:f:\tp 01\tp_1\misfunciones.c
+	<stdio.h>
+	<string.h>
+	<ctype.h>
+
+1459904004 source:c:\documents and settings\jorge\escritorio\mis_tp\tp_01\misfunciones.c
+	<stdio.h>
+	<string.h>
+	<ctype.h>
+
+1460001913 source:c:\documents and settings\jorge\escritorio\mis_tp\tp_01\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	"misFunciones.h"
+
+1459904004 c:\documents and settings\jorge\escritorio\mis_tp\tp_01\misfunciones.h
+
