@@ -95,7 +95,7 @@ long int factorial(int numero)
 
 /** \brief Muestra una lista al usuario y devuelve la opción elegida
  *
- * \param Opciones del menú
+ * \param Texto del menú (con sus opciones)
  * \return Opción elegida
  *
  */
