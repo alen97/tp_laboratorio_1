@@ -7,10 +7,9 @@
 
 int main()
 {
-    int opcion; // Variable donde se guardará la opción indicada (1 al 9)
+    int opcion; /**< Variable donde se guardará la opción indicada (1 al 9) */
     char seguir = 's';
     float operandoA = 0.0, operandoB = 0.0;
-    float resultado; // Variable donde se guardará la operación indicada
 
     while (seguir == 's')
     {
@@ -37,59 +36,32 @@ int main()
             break;
 
         case 3: /**< Suma */
-            resultado = sumar(operandoA, operandoB);
-            printf("\n~ El resultado de la suma es %.2f ~\n\n", resultado);
+            sumar(operandoA, operandoB);
             break;
 
         case 4: /**< Resta */
-            resultado = restar(operandoA, operandoB);
-            printf("\n~ El resultado de la resta es %.2f ~\n\n", resultado);
+            restar(operandoA, operandoB);
             break;
 
         case 5: /**< Multiplicación */
-            resultado = multiplicar(operandoA, operandoB);
-            printf("\n~ El resultado de la multiplicacion es %.2f ~\n\n", resultado);
+            multiplicar(operandoA, operandoB);
             break;
 
         case 6: /**< División */
-            if(operandoA == 0 || operandoB == 0)
-            {
-                printf("\nError! No se puede dividir por 0");
-                break;
-            }
-            else
-            {
-                resultado = dividir(operandoA, operandoB);
-                printf("\n~ El resultado de la division es %.2f ~", resultado);
-                break;
-            }
+            dividir(operandoA, operandoB);
+            break;
 
         case 7: /**< Factorización */
-            resultado = factorial(operandoA);
-            printf("~ El resultado de la factorizacion es %.2f ~", resultado);
+            printf("~ El resultado de la factorizacion es %li ~", factorial((long)operandoA));
             break;
 
         case 8: /**< Todas las operaciones */
-            resultado = sumar(operandoA, operandoB);
-            printf("\n~ El resultado de la suma es %.2f ~\n\n", resultado);
-            resultado = restar(operandoA, operandoB);
-            printf("\n~ El resultado de la resta es %.2f ~\n\n", resultado);
-            resultado = multiplicar(operandoA, operandoB);
-            printf("\n~ El resultado de la multiplicacion es %.2f ~\n\n", resultado);
-            if(operandoA == 0 || operandoB == 0)
-            {
-                printf("\nError! No se puede dividir por 0");
-                break;
-            }
-            else
-            {
-                resultado = dividir(operandoA, operandoB);
-                printf("\n~ El resultado de la division es %.2f~ ", resultado);
-                break;
-            }
-            resultado = factorial(operandoA);
-            printf("\n~ El resultado de la factorizacion es %.2f ~", resultado);
-            break;
+            sumar(operandoA, operandoB);
+            restar(operandoA, operandoB);
+            multiplicar(operandoA, operandoB);
+            dividir(operandoA, operandoB);
+            factorial(operandoA);
+            printf("~ El resultado de la factorizacion es %li ~", factorial((long)operandoA));
 
         case 9: /**< Terminar programa */
             seguir= 'n';

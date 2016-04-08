@@ -10,11 +10,11 @@
  * \return Resultado de la suma
  *
  */
-float sumar(float operando1, float operando2)
+void sumar(float operando1, float operando2)
 {
     float resultado;
     resultado = operando1 + operando2;
-    return resultado;
+    printf("\n~ El resultado de la suma es %.2f ~\n\n", resultado);
 }
 
 
@@ -25,11 +25,11 @@ float sumar(float operando1, float operando2)
  * \return Resultado de la resta
  *
  */
-float restar(float operando1, float operando2)
+void restar(float operando1, float operando2)
 {
     float resultado;
     resultado = operando1 - operando2;
-    return resultado;
+    printf("\n~ El resultado de la resta es %.2f ~\n\n", resultado);
 }
 
 
@@ -40,11 +40,11 @@ float restar(float operando1, float operando2)
  * \return Resultado de la multiplicación
  *
  */
-float multiplicar(float operando1, float operando2)
+void multiplicar(float operando1, float operando2)
 {
     float resultado;
     resultado = operando1 * operando2;
-    return resultado;
+    printf("\n~ El resultado de la multiplicacion es %.2f ~\n\n", resultado);
 }
 
 
@@ -55,17 +55,17 @@ float multiplicar(float operando1, float operando2)
  * \return Resultado de la división, en caso de dividir por 0 devuelve error
  *
  */
-float dividir(float operando1, float operando2)
+void dividir(float operando1, float operando2)
 {
     float resultado;
-    if(operando2 != 0)
+    if(operando1 != 0 && operando1 != 0)
     {
         resultado = operando1 / operando2;
-        return resultado;
+        printf("\n~ El resultado de la division es %.2f ~", resultado);
     }
     else
     {
-        return 0;
+        printf("\nError! No se puede dividir por 0");
     }
 
 }
@@ -77,14 +77,16 @@ float dividir(float operando1, float operando2)
  * \return Resultado de la factorización
  *
  */
-long int factorial(int numero)
+long int factorial(long int numero)
 {
     int x;
+    long int resultado;
 
     if(numero != 1)
     {
         x = factorial(numero - 1);
-        return (numero * x);
+        resultado = numero * x;
+        return resultado;
     }
     else
     {
