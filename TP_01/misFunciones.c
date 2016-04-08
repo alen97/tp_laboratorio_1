@@ -58,7 +58,7 @@ void multiplicar(float operando1, float operando2)
 void dividir(float operando1, float operando2)
 {
     float resultado;
-    if(operando1 != 0 && operando1 != 0)
+    if(operando1 != 0 && operando2 != 0)
     {
         resultado = operando1 / operando2;
         printf("\n~ El resultado de la division es %.2f ~", resultado);
