@@ -46,3 +46,17 @@
 
 1460083751 c:\documents and settings\jorge\escritorio\mis_tp\tp_01\misfunciones.h
 
+1461116108 source:c:\documents and settings\jorge\escritorio\gaby~\mis_tp\tp_01\misfunciones.c
+	<stdio.h>
+	<string.h>
+	<ctype.h>
+
+1461115909 source:c:\documents and settings\jorge\escritorio\gaby~\mis_tp\tp_01\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	"misFunciones.h"
+
+1460083751 c:\documents and settings\jorge\escritorio\gaby~\mis_tp\tp_01\misfunciones.h
+

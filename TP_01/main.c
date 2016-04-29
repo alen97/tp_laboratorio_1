@@ -62,7 +62,7 @@ int main()
             dividir(operandoA, operandoB);
             factorial(operandoA);
             printf("~ El resultado de la factorizacion es %li ~", factorial((long)operandoA));
-
+            break;
         case 9: /**< Terminar programa */
             seguir= 'n';
             break;
