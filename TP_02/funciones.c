@@ -22,21 +22,21 @@ void agregarPersona(EPersona persona[])
         {
             fflush(stdin);
 
-            printf("Ingrese nombre: ");
+            printf("\nIngrese nombre: ");
             gets(persona[i].nombre);
             if(strlen(persona[i].nombre) < 2 || strlen(persona[i].nombre) > 30)
             {
-                printf("El nombre es invalido.");
+                printf("\nEl nombre es invalido.\n\n");
                 break;
             }
 
 
-            if(getShortInt(&persona[i].edad, "Ingrese edad: ", "La edad es invalida.\n", 1, 99) == -1)
+            if(getShortInt(&persona[i].edad, "\nIngrese edad: ", "\nLa edad es invalida.\n\n", 1, 99) == -1)
             {
                 break;
             }
 
-            if(getLongInt(&persona[i].dni, "Ingrese DNI: ", "El DNI es invalido.\n", 5000000, 100000000) == -1)
+            if(getLongInt(&persona[i].dni, "\nIngrese DNI: ", "\nEl DNI es invalido.\n\n", 5000000, 100000000) == -1)
             {
                 break;
             }
@@ -60,34 +60,47 @@ void borrarPersona(EPersona persona[])
 
     int i;
     long int dni;
+    short int dniValido=1; /**< FLAG */
     printf("Ingrese el DNI de la persona que desea borrar: ");
     scanf("%ld", &dni);
 
-    for(i=0; i<CANTIDAD; i++)
+    if(dni < 5000000)
     {
-        if(dni == persona[i].dni)
-        {
-            persona[i].estado = 0;
-        }
+        dniValido = 0;
+        printf("\nDNI invalido.\n");
     }
 
+    if(dniValido == 1)
+    {
+        for(i=0; i<CANTIDAD; i++)
+        {
+            if(dni == persona[i].dni)
+            {
+                persona[i].estado = 0;
+            }
+        }
+    }
 }
 
 void ordenarPersonas(EPersona persona[])
 {
     EPersona personaAux;
     int i, j;
+
     for(i=0; i<CANTIDAD-1; i++)
     {
         for(j=i+1; j<CANTIDAD; j++)
         {
-            if(strcmp(persona[i].nombre, persona[j].nombre) > 0)
+            if(persona[i].estado == 1 && persona[j].estado == 1)
             {
-                personaAux = persona[i];
-                persona[i] = persona[j];
-                persona[j] = personaAux;
-            }
+                if(strcmp(persona[i].nombre, persona[j].nombre) > 0)
+                {
+                    personaAux = persona[i];
+                    persona[i] = persona[j];
+                    persona[j] = personaAux;
+                }
 
+            }
         }
     }
 }
