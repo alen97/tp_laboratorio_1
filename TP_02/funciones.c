@@ -21,10 +21,15 @@ void agregarPersona(EPersona persona[])
         if(persona[i].estado == 0)
         {
             fflush(stdin);
-            if(getString(persona[i].nombre, "Ingrese nombre: ", "El nombre es invalido.\n", 2, 30) == -1)
+
+            printf("Ingrese nombre: ");
+            gets(persona[i].nombre);
+            if(strlen(persona[i].nombre) < 2 || strlen(persona[i].nombre) > 30)
             {
+                printf("El nombre es invalido.");
                 break;
             }
+
 
             if(getShortInt(&persona[i].edad, "Ingrese edad: ", "La edad es invalida.\n", 1, 99) == -1)
             {
@@ -90,18 +95,14 @@ void ordenarPersonas(EPersona persona[])
 
 void imprimirLista(EPersona persona[])
 {
+    ordenarPersonas(persona);
     int i;
     for(i=0; i<CANTIDAD; i++)
     {
         if(persona[i].estado == 1)
         {
-            ordenarPersonas(persona);
-
-            printf("\n%s\n", persona[i].nombre);
-            printf("%hi\n", persona[i].edad);
-            printf("%ld\n", persona[i].dni);
-            printf( "\n ~  ~  ~  ~  ~ \n" );
-
+            printf("Nombre: %s - Edad: %hi - DNI: %ld\n", persona[i].nombre, persona[i].edad, persona[i].dni);
+            printf( "~  ~  ~  ~  ~ \n" );
         }
 
     }
@@ -109,7 +110,7 @@ void imprimirLista(EPersona persona[])
 
 }
 
-void imprimirGrafico(EPersona persona[])
+void imprimirGrafico(EPersona persona[]) /**< Utilicé el gráfico subido al Campus */
 {
     int i,x, hasta18=0, de19a35=0, mayorDe35=0, flag=0, mayor;
 

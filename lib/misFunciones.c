@@ -30,7 +30,7 @@ int getInt(int* ret, char* msg, char* error_msg, int min, int max)
     return 0;
 }
 
-short int getShortInt(short int* ret, char* msg, char* error_msg, int min, int max)
+int getShortInt(short int* ret, char* msg, char* error_msg, int min, int max)
 {
     int numero;
     printf(msg);
@@ -49,7 +49,7 @@ short int getShortInt(short int* ret, char* msg, char* error_msg, int min, int m
     return 0;
 }
 
-long int getLongInt(long int* ret, char* msg, char* error_msg, int min, int max)
+int getLongInt(long int* ret, char* msg, char* error_msg, int min, int max)
 {
     int numero;
     printf(msg);
@@ -70,7 +70,7 @@ long int getLongInt(long int* ret, char* msg, char* error_msg, int min, int max)
 
 
 /**< getString(&nombre, "Ingrese nombre", "nombre invalido", 2, 49); */
-char getString(char* ret, char* msg, char* error_msg, int min, int max)
+int getString(char* ret, char* msg, char* error_msg, int min, int max)
 {
     char cadena[50];
     printf(msg);
@@ -92,7 +92,7 @@ char getString(char* ret, char* msg, char* error_msg, int min, int max)
 }
 
 /**< getFloat(&salario, "Ingrese salario", "salario invalido", 800, 50000); */
-float getFloat(float* ret, char* msg, char* error_msg, int min, int max)
+int getFloat(float* ret, char* msg, char* error_msg, int min, int max)
 {
     float numero;
     printf(msg);
