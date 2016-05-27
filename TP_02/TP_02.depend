@@ -8,15 +8,15 @@
 
 1461905198 c:\documents and settings\jorge\escritorio\gaby~\mis_tp\tp_02\funciones.h
 
-1461902195 source:c:\documents and settings\jorge\escritorio\gaby~\mis_tp\tp_02\main.c
+1464108946 source:c:\documents and settings\jorge\escritorio\gaby~\mis_tp\tp_02\main.c
 	<stdio.h>
 	<stdlib.h>
 	"funciones.h"
 	"../lib/MisFunciones.h"
 
-1461906805 c:\documents and settings\jorge\escritorio\gaby~\mis_tp\lib\misfunciones.h
+1463885222 c:\documents and settings\jorge\escritorio\gaby~\mis_tp\lib\misfunciones.h
 
-1461906990 source:c:\documents and settings\jorge\escritorio\gaby~\mis_tp\lib\misfunciones.c
+1463885214 source:c:\documents and settings\jorge\escritorio\gaby~\mis_tp\lib\misfunciones.c
 	<stdio.h>
 	<string.h>
 	"misFunciones.h"

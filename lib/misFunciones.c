@@ -2,12 +2,21 @@
 #include <string.h>
 #include "misFunciones.h"
 
-int menu(char* items)
+int menu(char* items, char* errorMsg, int cantidad)
 {
     int numero;
     printf(items);
     scanf("%d", &numero);
-    return numero;
+    if(numero > 0 && numero <= cantidad)
+    {
+        return numero;
+    }
+    else
+    {
+        printf("%s\n",errorMsg);
+        return -1;
+    }
+
 }
 
 /**< getInt(&edad, "Ingrese edad", "Edad invalida", 1, 99); */
@@ -17,7 +26,7 @@ int getInt(int* ret, char* msg, char* error_msg, int min, int max)
     printf(msg);
     scanf("%d", &numero);
 
-    if(numero <= min || numero >= max)
+    if(numero < min || numero > max)
     {
         printf (error_msg); /**< FUERA RANGO */
         return -1;
@@ -32,11 +41,11 @@ int getInt(int* ret, char* msg, char* error_msg, int min, int max)
 
 int getShortInt(short int* ret, char* msg, char* error_msg, int min, int max)
 {
-    int numero;
+    short int numero;
     printf(msg);
-    scanf("%d", &numero);
+    scanf("%hi", &numero);
 
-    if(numero <= min || numero >= max)
+    if(numero < min || numero > max)
     {
         printf (error_msg); /**< FUERA RANGO */
         return -1;
@@ -51,11 +60,11 @@ int getShortInt(short int* ret, char* msg, char* error_msg, int min, int max)
 
 int getLongInt(long int* ret, char* msg, char* error_msg, int min, int max)
 {
-    int numero;
+    long int numero;
     printf(msg);
-    scanf("%d", &numero);
+    scanf("%ld", &numero);
 
-    if(numero <= min || numero >= max)
+    if(numero < min || numero > max)
     {
         printf (error_msg); /**< FUERA RANGO */
         return -1;
@@ -68,23 +77,44 @@ int getLongInt(long int* ret, char* msg, char* error_msg, int min, int max)
     return 0;
 }
 
-
-/**< getString(&nombre, "Ingrese nombre", "nombre invalido", 2, 49); */
-int getString(char* ret, char* msg, char* error_msg, int min, int max)
+int getChar(char* ret, char* msg, char* error_msg)
 {
-    char cadena[50];
+    char caracter;
     printf(msg);
     fflush(stdin);
-    gets(cadena);
+    scanf("%c", &caracter);
 
-    if(strlen(cadena) <= min || strlen(cadena) >= max)
+    if(sizeof(caracter) > 1 || sizeof(caracter) < 0) /**< REVISAR SIZEOF */
     {
         printf (error_msg); /**< FUERA RANGO */
         return -1;
     }
     else
     {
-        *ret = *cadena;
+        ret = &caracter;
+    }
+
+
+    return 0;
+}
+
+/**< getString(&nombre, "Ingrese nombre", "nombre invalido", 2, 49); */
+int getString(char* ret, char* msg, char* error_msg, int min, int max)
+{
+    char cadena[max+1], buffer[5060];
+    printf(msg);
+    fflush(stdin);
+    gets(buffer);
+
+    if(strlen(buffer) < min || strlen(buffer) > max)
+    {
+        printf (error_msg); /**< FUERA RANGO */
+        return -1;
+    }
+    else
+    {
+        strcpy(cadena,buffer);
+        strcpy(ret, cadena);
     }
 
 
@@ -98,7 +128,7 @@ int getFloat(float* ret, char* msg, char* error_msg, int min, int max)
     printf(msg);
     scanf("%f", &numero);
 
-    if(numero <= min || numero >= max)
+    if(numero < min || numero > max)
     {
         printf (error_msg); /**< FUERA RANGO */
         return -1;

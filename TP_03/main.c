@@ -1,34 +1,35 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "funciones.h"
-#include "../lib/MisFunciones.h"
+#include "../lib/misFunciones.h"
 
 int main()
 {
-    EPersona personas[CANTIDAD];
-    inicializarEstado(personas);
-
+    EMovie pMovie[CANTIDAD];
     char seguir='s';
+    char nombreArchivo[31] = "index.html";
     int opcion=0;
+
+    inicializarEstados(pMovie);
 
     while(seguir=='s')
     {
 
-        opcion = menu("1- Agregar persona\n2- Borrar persona\n3- Imprimir lista ordenada por  nombre\n4- Imprimir grafico de edades\n\n5- Salir\n\n", "Error", 5);
+        opcion = menu("~Menu:\n1- Agregar pelicula\n2- Modificar pelicula\n3- Borrar pelicula\n4- Generar pagina web\n5- Salir\n\n", "Opcion invalida !\n", 5);
 
         switch(opcion)
         {
             case 1:
-                agregarPersona(personas);
+                agregarPelicula(pMovie);
                 break;
             case 2:
-                borrarPersona(personas);
+                modificarPelicula(pMovie);
                 break;
             case 3:
-                imprimirLista(personas);
+                borrarPelicula(pMovie);
                 break;
             case 4:
-                imprimirGrafico(personas);
+                generarPagina(pMovie, nombreArchivo);
                 break;
             case 5:
                 seguir = 'n';
@@ -38,4 +39,3 @@ int main()
 
     return 0;
 }
-
