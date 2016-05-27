@@ -1,19 +1,22 @@
 # depslib dependency file v1.0
-1463504226 source:c:\documents and settings\jorge\escritorio\gaby~\mis_tp\tp_03\main.c
+1464137884 source:c:\documents and settings\jorge\escritorio\gaby~\mis_tp\tp_03\main.c
 	<stdio.h>
 	<stdlib.h>
 	"funciones.h"
 	"../lib/misFunciones.h"
 
-1463503464 c:\documents and settings\jorge\escritorio\gaby~\mis_tp\tp_03\funciones.h
+1464137768 c:\documents and settings\jorge\escritorio\gaby~\mis_tp\tp_03\funciones.h
 
-1463503976 source:c:\documents and settings\jorge\escritorio\gaby~\mis_tp\tp_03\funciones.c
+1464371915 source:c:\documents and settings\jorge\escritorio\gaby~\mis_tp\tp_03\funciones.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
 	"funciones.h"
 	"../lib/misFunciones.h"
 
-1463503885 c:\documents and settings\jorge\escritorio\gaby~\mis_tp\lib\misfunciones.h
+1463503886 c:\documents and settings\jorge\escritorio\gaby~\mis_tp\lib\misfunciones.h
 
-1463504432 source:c:\documents and settings\jorge\escritorio\gaby~\mis_tp\lib\misfunciones.c
+1464109048 source:c:\documents and settings\jorge\escritorio\gaby~\mis_tp\lib\misfunciones.c
 	<stdio.h>
 	<string.h>
 	"misFunciones.h"
