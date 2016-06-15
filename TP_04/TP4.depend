@@ -1,0 +1,42 @@
+# depslib dependency file v1.0
+1465592366 source:g:\programacion-laboratorio i\tp4\tp4\arraylist.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ArrayList.h"
+
+1465592366 g:\programacion-laboratorio i\tp4\tp4\arraylist.h
+
+1465930426 source:g:\programacion-laboratorio i\mistp\tp_04\arraylist.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../inc/ArrayList.h"
+
+1465875298 g:\programacion-laboratorio i\mistp\tp_04\arraylist.h
+
+1465956100 source:g:\programacion-laboratorio i\mistp\tp_04\main.c
+	<stdio.h>
+	<stdlib.h>
+	"../lib/misFunciones.h"
+	"arrayList.h"
+	"myFood.h"
+
+1463503886 g:\programacion-laboratorio i\mistp\lib\misfunciones.h
+
+1464109048 source:g:\programacion-laboratorio i\mistp\lib\misfunciones.c
+	<stdio.h>
+	<string.h>
+	"misFunciones.h"
+
+1465956418 g:\programacion-laboratorio i\mistp\tp_04\myfood.h
+	"arrayList.h"
+
+1465957086 source:g:\programacion-laboratorio i\mistp\tp_04\myfood.c
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+	"../lib/misFunciones.h"
+	"arrayList.h"
+	"myFood.h"
+
