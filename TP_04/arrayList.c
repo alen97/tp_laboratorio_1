@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "../inc/ArrayList.h"
+#include "arrayList.h"
 
 // funciones privadas
 int resizeUp(ArrayList* pList);
@@ -163,7 +163,7 @@ int al_contains(ArrayList* pList, void* pElement)
 {
     int returnAux = -1;
     int i;
-    short int contains;
+    short int contains = 0;
 
     if(pList != NULL && pElement != NULL)
     {
@@ -222,7 +222,7 @@ int al_set(ArrayList* pList, int index,void* pElement)
  * \return int Return (-1) if Error [pList is NULL pointer or invalid index]
  *                  - ( 0) if Ok
  */
-int al_remove(ArrayList* pList,int index)
+int al_remove(ArrayList* pList,int index) // size = 2, index ingresado = 0
 {
     int returnAux = -1;
     int i;
@@ -231,9 +231,9 @@ int al_remove(ArrayList* pList,int index)
     {
         pList->pElements[index] = NULL;
 
-        for(i=pList->size ; i>index ; i--)
+        for(i=index; i < pList->size-1 ; i++)
         {
-            pList->pElements[i-1] = pList->pElements[i];
+            pList->pElements[i] = pList->pElements[i+1];
         }
 
         pList->size --;
@@ -314,9 +314,9 @@ int al_push(ArrayList* pList, int index, void* pElement)
                 pList->pElements = realloc(pList->pElements, sizeof(void*) * pList->reservedSize);
             }
 
-            for(i=pList->size; i > index; i--)
+            for(i=index; i < pList->size-1 ; i++)
             {
-                pList->pElements[i] = pList->pElements[i-1];
+                pList->pElements[i] = pList->pElements[i+1];
             }
 
             pList->pElements[index] = pElement;

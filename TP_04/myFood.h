@@ -6,8 +6,8 @@ typedef struct{
 }SFood;
 
 SFood* newFood();
-void addFood(ArrayList* pFoodList, SFood* pFood);
-void modifyFood(ArrayList* pFoodList, SFood* pFood);
-void deleteFood(ArrayList* pFoodList, SFood* pFood);
+void addFood(ArrayList* pFoodList);
+void modifyFood(ArrayList* pFoodList);
+void deleteFood(ArrayList* pFoodList);
 void deleteAll(ArrayList* pFoodList);
-void showAll(ArrayList* pFoodList, SFood* pFood);
+void showAll(ArrayList* pFoodList);

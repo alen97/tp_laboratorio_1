@@ -40,3 +40,69 @@
 	"arrayList.h"
 	"myFood.h"
 
+1464109048 source:e:\programacion-laboratorio i\mistp\lib\misfunciones.c
+	<stdio.h>
+	<string.h>
+	"misFunciones.h"
+
+1463503886 e:\programacion-laboratorio i\mistp\lib\misfunciones.h
+
+1466035036 source:e:\programacion-laboratorio i\mistp\tp_04\arraylist.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"arrayList.h"
+
+1466035410 source:e:\programacion-laboratorio i\mistp\tp_04\main.c
+	<stdio.h>
+	<stdlib.h>
+	"../lib/misFunciones.h"
+	"arrayList.h"
+	"myFood.h"
+
+1465875298 e:\programacion-laboratorio i\mistp\tp_04\arraylist.h
+
+1466029326 e:\programacion-laboratorio i\mistp\tp_04\myfood.h
+	"arrayList.h"
+
+1466035294 source:e:\programacion-laboratorio i\mistp\tp_04\myfood.c
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+	"../lib/misFunciones.h"
+	"arrayList.h"
+	"myFood.h"
+
+1464109048 source:h:\programacion-laboratorio i\mistp\lib\misfunciones.c
+	<stdio.h>
+	<string.h>
+	"misFunciones.h"
+
+1463503886 h:\programacion-laboratorio i\mistp\lib\misfunciones.h
+
+1466035036 source:h:\programacion-laboratorio i\mistp\tp_04\arraylist.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"arrayList.h"
+
+1465875298 h:\programacion-laboratorio i\mistp\tp_04\arraylist.h
+
+1466035410 source:h:\programacion-laboratorio i\mistp\tp_04\main.c
+	<stdio.h>
+	<stdlib.h>
+	"../lib/misFunciones.h"
+	"arrayList.h"
+	"myFood.h"
+
+1466029326 h:\programacion-laboratorio i\mistp\tp_04\myfood.h
+	"arrayList.h"
+
+1466035294 source:h:\programacion-laboratorio i\mistp\tp_04\myfood.c
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+	"../lib/misFunciones.h"
+	"arrayList.h"
+	"myFood.h"
+

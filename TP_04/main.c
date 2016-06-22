@@ -7,7 +7,7 @@
 int main()
 {
     ArrayList* pFoodList = al_newArrayList();
-    SFood* pFood = newFood();
+
     int option;
     char confirm = 'y';
 
@@ -19,21 +19,23 @@ int main()
             switch(option)
             {
                 case 1:
-                    addFood(pFoodList, pFood);
+                    addFood(pFoodList);
                     break;
                 case 2:
-                    modifyFood(pFoodList, pFood);
+                    modifyFood(pFoodList);
                     break;
                 case 3:
-                    deleteFood(pFoodList, pFood);
+                    deleteFood(pFoodList);
                     break;
                 case 4:
                     deleteAll(pFoodList);
                     break;
                 case 5:
-                    showAll(pFoodList, pFood);
+                    showAll(pFoodList);
                     break;
                 default:
+                    al_deleteArrayList(pFoodList);
+                    free(pFoodList);
                     confirm = 'n';
             }
 
